@@ -6504,6 +6504,10 @@ pub mod funcs {
                                            lpNumberOfBytesTransferred: LPDWORD,
                                            bWait: BOOL) -> BOOL;
                 pub fn DisconnectNamedPipe(hNamedPipe: HANDLE) -> BOOL;
+
+                pub fn IsThreadAFiber() -> BOOL;
+                pub fn SwitchToThread() -> BOOL;
+                pub fn ConvertFiberToThread() -> BOOL;
             }
         }
 

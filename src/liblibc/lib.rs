@@ -6320,7 +6320,7 @@ pub mod funcs {
         pub mod kernel32 {
             use types::os::arch::c95::{c_uint};
             use types::os::arch::extra::{BOOL, DWORD, SIZE_T, HMODULE,
-                                               LPCWSTR, LPWSTR,
+                                               LPCWSTR, LPWSTR, UINT,
                                                LPWCH, LPDWORD, LPVOID,
                                                LPCVOID, LPOVERLAPPED,
                                                LPSECURITY_ATTRIBUTES,
@@ -6504,6 +6504,9 @@ pub mod funcs {
                                            lpNumberOfBytesTransferred: LPDWORD,
                                            bWait: BOOL) -> BOOL;
                 pub fn DisconnectNamedPipe(hNamedPipe: HANDLE) -> BOOL;
+
+                pub fn ExitThread(dwExitCode: DWORD);
+                pub fn ExitProcess(dwExitCode: UINT);
 
                 pub fn IsThreadAFiber() -> BOOL;
                 pub fn SwitchToThread() -> BOOL;
